@@ -1,1 +1,25 @@
+/* style.css
+   Tailwind (via CDN in index.html) handles almost all of the styling
+   using utility classes directly in the HTML. This file only holds
+   small extras that Tailwind's utility classes don't cover directly.
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth color/weight transition when a criteria row is met */
+.rule-icon {
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+}
+
+#rule-length,
+#rule-lowercase,
+#rule-uppercase,
+#rule-number,
+#rule-special {
+    transition: color 0.2s ease;
+}
 
