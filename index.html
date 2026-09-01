@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Visualizer</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-[480px] bg-white p-6 sm:p-[30px] rounded-2xl shadow-lg">
+
+        <h1 class="text-center text-2xl font-bold text-gray-800 mb-1">🔐 Password Strength Visualizer</h1>
+        <p class="text-center text-gray-500 text-sm mb-6">Type a password and see how strong it really is.</p>
+
+        <!-- PASSWORD INPUT -->
+        <label for="passwordInput" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+        <div class="relative mb-4">
+            <input type="password" id="passwordInput" placeholder="Start typing..."
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 text-gray-700 outline-none focus:border-blue-600"
+                autocomplete="off">
+            <button type="button" id="toggleVisibilityBtn" onclick="toggleVisibility()"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-sm">
+                Show
+            </button>
+        </div>
+
+        <!-- STRENGTH BAR -->
+        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2 overflow-hidden">
+            <div id="strengthBar" class="h-2.5 rounded-full transition-all duration-300 ease-out" style="width: 0%"></div>
+        </div>
+
+        <!-- STRENGTH LABEL -->
+        <div class="flex justify-between items-center mb-6">
+            <span id="strengthLabel" class="text-sm font-semibold text-gray-400">Enter a password</span>
+            <span id="crackTimeLabel" class="text-xs text-gray-400"></span>
+        </div>
+
+        <!-- CRITERIA CHECKLIST -->
+        <p class="text-sm font-medium text-gray-700 mb-3">Your password should have:</p>
+        <ul class="flex flex-col gap-2 mb-2">
+            <li id="rule-length" class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="rule-icon">○</span> At least 8 characters
+            </li>
+            <li id="rule-lowercase" class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="rule-icon">○</span> A lowercase letter (a-z)
+            </li>
+            <li id="rule-uppercase" class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="rule-icon">○</span> An uppercase letter (A-Z)
+            </li>
+            <li id="rule-number" class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="rule-icon">○</span> A number (0-9)
+            </li>
+            <li id="rule-special" class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="rule-icon">○</span> A special character (!@#$%^&* etc.)
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
