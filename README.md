@@ -59,8 +59,3 @@ password-strength-visualizer/
 - Add a "generate a strong password" button
 - Check against a small list of the most common leaked passwords
 - Add a copy-to-clipboard button for a generated password
-
-## License
-
-Free to use for learning or personal projects.
-
