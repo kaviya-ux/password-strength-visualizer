@@ -53,4 +53,8 @@ password-strength-visualizer/
 2. Make sure `index.html`, `style.css`, and `script.js` stay in the same folder.
 3. Open `index.html` in your browser.
 
+## Possible Improvements
 
+- Detect and penalize common weak patterns (e.g. "password123", keyboard sequences like "qwerty")
+- Add a "generate a strong password" button
+- Check against a small list of the most common leaked passwords
