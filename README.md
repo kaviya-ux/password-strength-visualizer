@@ -1,6 +1,4 @@
-# 🔐 Password Strength Visualizer
 
-A live password strength checker built with HTML, Tailwind CSS, and vanilla JavaScript, split into separate structure, style, and logic files. Type a password and instantly see a color-coded strength meter, a live checklist of security criteria, and a rough estimate of how long it would take to brute-force.
 
 ## Live Demo
 
